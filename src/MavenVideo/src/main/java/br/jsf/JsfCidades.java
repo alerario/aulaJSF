@@ -37,6 +37,19 @@ public class JsfCidades {
     public void remove(br.data.entity.Cidades cid){
         new br.data.crud.CrudCidades().remove(cid);
     }
+    
+    public void merge(){
+        br.data.entity.Cidades cid;
+        cid = new br.data.entity.Cidades();
+        cid.setCodigo(codigo);
+        cid.setNome(nome);
+        new br.data.crud.CrudCidades().merge(cid);
+    }
+    
+    public void load_data(br.data.entity.Cidades cid){
+        this.codigo = cid.getCodigo();
+        this.nome = cid.getNome();
+    }
     public java.util.Collection<br.data.entity.Cidades> getAll(){
         return new br.data.crud.CrudCidades().getAll();
     }

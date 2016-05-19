@@ -14,6 +14,7 @@
             nome:
             <h:inputText value="#{jsfCidades.nome}"/>
             <h:commandButton value="salvar" action="#{jsfCidades.salvar()}"/>
+            <h:commandButton value="modificar" action="#{jsfCidades.merge()}"/>
         </h:form>
         <hr> </hr>
         <h:form>
@@ -26,6 +27,9 @@
                 </h:column>
                 <h:column>
                     <h:commandButton value="X" action="#{jsfCidades.remove(cid)}" />
+                </h:column>
+                 <h:column>
+                     <h:commandButton value="Editar" action="#{jsfCidades.load_data(cid)}" />
                 </h:column>
             </h:dataTable>
         </h:form>

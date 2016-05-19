@@ -49,6 +49,23 @@ public class CrudCidades {
         }
     }
       
+       public void merge(br.data.entity.Cidades cidade) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            br.data.entity.Cidades cid;
+            cid = em.find(br.data.entity.Cidades.class, cidade.getCodigo());
+            cid.setNome(cidade.getNome());
+            em.merge(cid);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", e);
+            em.getTransaction().rollback();
+        } finally {
+            em.close();
+        }
+    }
+      
     public java.util.Collection<br.data.entity.Cidades> getAll() {
         EntityManager em = emf.createEntityManager();
         try {
