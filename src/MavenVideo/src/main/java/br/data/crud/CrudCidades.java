@@ -33,6 +33,22 @@ public class CrudCidades {
         }
     }
     
+      public void remove(br.data.entity.Cidades cidade) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            br.data.entity.Cidades cid;
+            cid = em.find(br.data.entity.Cidades.class, cidade.getCodigo());
+            em.remove(cid);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", e);
+            em.getTransaction().rollback();
+        } finally {
+            em.close();
+        }
+    }
+      
     public java.util.Collection<br.data.entity.Cidades> getAll() {
         EntityManager em = emf.createEntityManager();
         try {

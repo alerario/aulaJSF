@@ -24,6 +24,9 @@
                 <h:column>
                     <h:outputText value="#{cid.nome}"/>
                 </h:column>
+                <h:column>
+                    <h:commandButton value="X" action="#{jsfCidades.remove(cid)}" />
+                </h:column>
             </h:dataTable>
         </h:form>
     </h:body>

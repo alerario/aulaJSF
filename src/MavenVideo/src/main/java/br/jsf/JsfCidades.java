@@ -34,6 +34,9 @@ public class JsfCidades {
         new br.data.crud.CrudCidades().persist(cid);
     }
     
+    public void remove(br.data.entity.Cidades cid){
+        new br.data.crud.CrudCidades().remove(cid);
+    }
     public java.util.Collection<br.data.entity.Cidades> getAll(){
         return new br.data.crud.CrudCidades().getAll();
     }
