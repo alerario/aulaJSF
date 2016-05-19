@@ -7,6 +7,25 @@
     </h:head>
     <h:body>
         Hello from Facelets
+        <h:form>
+            codigo:
+            <h:inputText value="#{jsfCidades.codigo}" />
+            <br></br>
+            nome:
+            <h:inputText value="#{jsfCidades.nome}"/>
+            <h:commandButton value="salvar" action="#{jsfCidades.salvar()}"/>
+        </h:form>
+        <hr> </hr>
+        <h:form>
+            <h:dataTable value="#{jsfCidades.all}" var="cid">
+                <h:column>
+                    <h:outputText value="#{cid.codigo}"/>
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{cid.nome}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
     </h:body>
 </html>
 
