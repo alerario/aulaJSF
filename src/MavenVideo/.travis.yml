@@ -1,5 +1,4 @@
 language: java
 jdk:
-	  - jdk8
-script:
-	mvn verify
+  - oraclejdk8
+script: mvn clean verify -DskipTests=false -DskipITs=false -DskipSTs=false
