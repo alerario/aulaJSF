@@ -1,2 +1,5 @@
 language: java
-mvn verify
+jdk:
+	  - jdk8
+script:
+	  mvn verify
