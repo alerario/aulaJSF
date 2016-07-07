@@ -1,5 +1,7 @@
 before_install: cd src/MavenVideo
-before_script: cd src/MavenVideo
+before_script: 
+ - cd src/MavenVideo
+ - ls
 language: java
 jdk:
   - oraclejdk8
