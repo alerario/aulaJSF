@@ -1,3 +1,4 @@
+before_install: cd /src/MavenVideo/
 language: java
 jdk:
   - oraclejdk8
