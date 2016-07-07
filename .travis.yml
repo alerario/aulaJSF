@@ -1,7 +1,4 @@
-before_install: 
- - cd src/MavenVideo
- - ls
-before_script: 
+before_install:
  - cd src/MavenVideo
  - ls
 language: java
