@@ -11,7 +11,7 @@ INSERT INTO public.teste(codigo, nome) VALUES (3, 'Paula');
 INSERT INTO public.teste(codigo, nome) VALUES (4, 'Donato');
 INSERT INTO public.teste(codigo, nome) VALUES (5, 'Rita');
 INSERT INTO public.teste(codigo, nome) VALUES (6, 'Silvia');
-
+INSERT INTO public.teste(cod, nome) VALUES (7, 'Silvia');
 
 -------------------------------------------
 --Tabela XXX
