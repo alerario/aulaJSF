@@ -92,7 +92,7 @@ public class CrudTesteTest {
         System.out.println("-----------------------------------------------");
         System.out.println(x);
         assertNotEquals(0, x);
-        assertNotEquals(-1, x);
+        assertEquals(-1, x);
         //assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
